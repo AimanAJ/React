@@ -4,8 +4,8 @@ const Sort =() =>{
     return(
         <div  className="m-5">
             <h1>Task 1</h1>
-            {array.join('  ')}
-            <div>-------------------------------------------</div>
+            {array.join(' ,  ')}
+           <br></br>
         </div>
     );
 }
