@@ -1,37 +1,32 @@
-const Map = () => {
-    const Fruits = [
-        { id: 1, name: "Apple", color: "Yellow" },
-        { id: 2, name: "Strawberry", color: "Red" },
-        { id: 3, name: "Kiwi", color: "Green" }
-    ];
-    const mapFruits = Fruits.map((fruit) => {
-        return (
-            <tr>
-                <td>{fruit.id}</td>
-                <td>{fruit.name}</td>
-                <td>{fruit.color}</td>
-            </tr>
-        )
-    })
-    return (
-        <div className="m-5">
-            <h3> Task 2</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Color</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    {mapFruits}
-                </tbody>
-            </table>
-            <div>-------------------------------------------------</div>
+export default function App() {
+
+    let employees = [
+        { id: 4, name: 'ahmad', country: 'Denmark' },
+        { id: 3, name: 'ali', country: 'Canada' },
+        { id: 2, name: 'omar', country: 'Belgium' },
+        { id: 1, name: 'mahmoud', country: 'Austria' },
+        { id: 6, name: 'osama', country: 'jordan' },
+        { id: 5, name: 'amjad', country: 'Egypt' },
+    ];
+
+
+    return (
+        <div>
+            {employees.map(element => {
+                (
+                    <div key={element.id}>
+                        <li>
+                            ID : {element.id} &nbsp;&nbsp;&nbsp;&nbsp;
+                            Name : {element.name} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Country : {element.country}
+                        </li>
+
+                        <hr />
+                    </div>
+                );
+            })}
         </div>
     );
-}
 
-export default Map;
+}

@@ -1,46 +1,18 @@
-import React from "react";
-
-
-class Filter extends React.Component {
-    state = {
-        names: ["Khozama", "Mohammad", "Lujain", "Nada", "Ayman"]
+import { useState } from "react";
+const Filter = () => {
+    let arr = ["ahmad", "ali", "omar", "me", "also-me"];
+    const [search, searchHandler] = useState('');
+    const ChangeHandler = (event) => {
+        let filteredArr = arr.filter(e => e.includes(event.target.value));
+        searchHandler(filteredArr);
     }
-    search = () => {
-        const element = document.getElementById('search').value;
-        if (element == '') {
-            this.setState({
-                names: ["Khozama", "Mohammad", "Lujain", "Nada", "Ayman"]
-            })
-        } else {
-
-            const filter = this.state.names.filter((name) => {
-                return (name.includes(element));
-            })
-            this.setState({
-                names: filter
-            })
-
-        }
-
-    }
-
-    render() {
-        const name = this.state.names.map((name) => {
-            return (
-                <p>{name}</p>
-            )
-        })
-        return (
-            <div className="m-5">
-                <h3>Task 3  </h3>
-                <form className="mb-3">
-                    <input type="text" placeholder="Search" onChange={this.search} id="search" />
-                </form>
-
-                <p>{name}</p>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <form>
+                <input type="text" onChange={ChangeHandler} />
+                <h5>{search}</h5>
+            </form>
+        </div>
+    );
 }
-
 export default Filter;
