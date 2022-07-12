@@ -7,7 +7,7 @@ const MoviesList = (props) => {
 
 
       <div className="col-lg-12 my-5">
-      <h3 className="text-center my-5">Our Movies</h3>
+
         <div className="latest_product_inner">
           <div className="row">
           {props.movies.map((movie)=> 

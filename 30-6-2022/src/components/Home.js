@@ -16,9 +16,8 @@ const Home = () => {
 
   return (
     <div className="col m-5">
-      <h1 className="row m-5">Netflix</h1>
+      <h1 >Movie list</h1>
 
-      <h5 className="row m-5 p-3">Latest Movies</h5>
       <div className="row m-5 p-3">
         {data.slice(1, 7).map((user) => {
           return (

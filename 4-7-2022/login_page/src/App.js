@@ -10,9 +10,8 @@ import { userContext } from "./component/userContext";
 import { useState, useEffect } from 'react'
 
 function App() {
-  // const [username, setUsername] = useState('');
-  // const [password, setPassword] = useState('');
-  const [user] = useState({ username: 'yousef@gmail.com', password: 'Yousef@123' });
+
+  const [user] = useState({ username: 'aiman@gmail.com', password: '12345' });
   const [message, setMessage] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
